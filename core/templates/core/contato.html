@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contato | Vitor Zavan</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="background-grid"></div>
+
+    <main class="contact-container">
+      <a href="/" class="back-button"> ← Voltar </a>
+
+      <section class="contact-header">
+        <p class="tag">Contato</p>
+
+        <h1>Entre em <span>Contato</span></h1>
+
+        <p class="contact-description">
+          Disponível para projetos de automação, desenvolvimento backend, RPA e
+          integrações.
+        </p>
+      </section>
+
+      <section class="contact-grid">
+        <a
+          href="mailto:vitorzavanj@gmail.com"
+          target="_blank"
+          class="contact-card interactive-card"
+        >
+          <div class="icon">✉️</div>
+
+          <h2>Email</h2>
+
+          <p>vitorzavanj@gmail.com</p>
+        </a>
+
+        <a
+          href="https://github.com/Zavan7"
+          target="_blank"
+          class="contact-card interactive-card"
+        >
+          <div class="icon">💻</div>
+
+          <h2>GitHub</h2>
+
+          <p>@Zavan7</p>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/vitor-zavan-831907297/"
+          target="_blank"
+          class="contact-card interactive-card"
+        >
+          <div class="icon">🔗</div>
+
+          <h2>LinkedIn</h2>
+
+          <p>Vitor Zavan</p>
+        </a>
+
+        <div class="contact-card">
+          <div class="icon">⚙️</div>
+
+          <h2>Stack</h2>
+
+          <p>Python • Django • Playwright • SQL • APIs • RPA</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
