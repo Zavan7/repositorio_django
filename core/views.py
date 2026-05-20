@@ -11,3 +11,10 @@ def sobre(request):
 
 def contato(request):
     return render(request, 'core/contato.html')
+
+
+def cod1(request):
+    return render(request, 'core/codeum.html')
+
+def cod2(request):
+    return render(request, 'core/codedois.html')

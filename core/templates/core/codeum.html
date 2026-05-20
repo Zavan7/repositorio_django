@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cod 1 | Vitor Zavan</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="background-grid"></div>
+
+    <main class="project-page">
+      <a href="/" class="back-button"> ← Voltar </a>
+
+      <section class="hero-project">
+        <p class="project-tag">Python • Selenium • Automação</p>
+
+        <h1>Download Automático <span>via CRM</span></h1>
+
+        <p class="project-text">
+          Automação desenvolvida para acessar um CRM, localizar elementos via
+          XPath e realizar downloads automáticos com validação do arquivo.
+        </p>
+      </section>
+
+      <section class="project-grid">
+        <div class="project-readme">
+          <h2>SOBRE</h2>
+
+          <p>
+            Projeto criado utilizando Python + Selenium para automatizar o fluxo
+            operacional de downloads dentro de um CRM web.
+          </p>
+
+          <ul>
+            <li>Login automatizado</li>
+            <li>Navegação entre páginas</li>
+            <li>Busca via XPath</li>
+            <li>Download automático</li>
+            <li>Controle de timeout</li>
+            <li>Tratamento de exceções</li>
+          </ul>
+
+          <a
+            href="https://github.com/Zavan7/Automa-o-Download-via-CRM"
+            target="_blank"
+            class="repo-link"
+          >
+            Acessar Repositório
+          </a>
+        </div>
+
+        <div class="code-preview">
+          <div class="editor-top">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+
+            <span class="editor-name"> download.py </span>
+          </div>
+
+          <div class="editor-body">
+            <pre><code><span class="blue">def</span> download_page(self, timeout=200):
+
+    <span class="gray">"""
+    Realiza download automático via CRM utilizando Selenium.
+    """</span>
+
+    <span class="blue">try</span>:
+
+        self.driver.find_element(
+            By.XPATH,
+            <span class="green-text">'/html/body/form/fieldset/ul/li[11]/button'</span>
+        ).click()
+
+        time.sleep(2)
+
+        start_time = start_time()
+
+        <span class="blue">while</span> True:
+
+            arquivos = os.listdir(
+                self.pasta_download
+            )
+
+            <span class="blue">if</span> arquivos:
+
+                logging.INFO(
+                    <span class="green-text">f"Arquivo encontrado: {arquivos}"</span>
+                )
+
+                <span class="blue">break</span>
+
+            <span class="blue">elif</span> time.time() - start_time > timeout:
+
+                <span class="blue">raise</span> TimeoutError(
+                    <span class="green-text">"Tempo excedido."</span>
+                )
+
+            <span class="blue">else</span>:
+                time.sleep(1)
+
+    <span class="blue">except</span> Exception as e:
+        logging.error(e)</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

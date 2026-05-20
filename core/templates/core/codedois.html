@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cod 1 | Vitor Zavan</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="background-grid"></div>
+
+    <main class="project-page">
+      <a href="/" class="back-button"> ← Voltar </a>
+
+      <section class="hero-project">
+        <p class="project-tag">Python • Selenium • Automação</p>
+
+        <h1>Diario de <span>Bordo</span></h1>
+
+        <p class="project-text">
+          Automação desenvolvida para acessar um CRM, localizar elementos via
+          XPath e realizar a coleta de informações.
+        </p>
+      </section>
+
+      <section class="project-grid">
+        <div class="project-readme">
+          <h2>SOBRE</h2>
+
+          <p>
+            Projeto criado utilizando Python + Selenium para automatizar o fluxo
+            operacional de raspagem de dados, fazendo uma busca em uma lista,
+            garantindo o máximo aproveitamento das informações.
+          </p>
+
+          <ul>
+            <li>Login automatizado</li>
+            <li>Navegação entre páginas</li>
+            <li>Busca via XPath</li>
+            <li>Controle de fluxo</li>
+            <li>Controle de timeout</li>
+            <li>Tratamento de exceções</li>
+          </ul>
+
+          <a
+            href="https://github.com/Zavan7/Diario-de-Bordo"
+            target="_blank"
+            class="repo-link"
+          >
+            Acessar Repositório
+          </a>
+        </div>
+
+        <div class="code-preview">
+          <div class="editor-top">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+
+            <span class="editor-name"> download.py </span>
+          </div>
+
+          <div class="editor-body">
+            <pre><code><span class="blue">def</span> search_campaign(self, texts: list):
+
+    <span class="gray">"""
+    Performs a search for each term in the provided list
+    within the campaign name input.
+
+    For each term, it submits the form, collects results
+    from the table, and stores the cleaned data in
+    self.raw_data.
+    """</span>
+
+    <span class="blue">try</span>:
+
+        <span class="blue">for</span> text <span class="blue">in</span> texts:
+
+            search_box = self.driver.find_element(
+                By.ID,
+                <span class="green-text">'nome_campanha'</span>
+            )
+
+            search_box.clear()
+
+            search_box.send_keys(text)
+
+            search_box.submit()
+
+            time.sleep(self.wait_time)
+
+            info = self.get_mailing_info()
+
+            lines = info.splitlines()
+
+            <span class="gray"># Skip the first two lines</span>
+
+            clean_lines = (
+                lines[2:]
+                <span class="blue">if</span> len(lines) > 2
+                <span class="blue">else</span> []
+            )
+
+            <span class="gray"># Store non-empty lines</span>
+
+            <span class="blue">for</span> line <span class="blue">in</span> clean_lines:
+
+                <span class="blue">if</span> line.strip():
+
+                    self.raw_data.append(line)
+
+    <span class="blue">except</span> Exception <span class="blue">as</span> e:
+
+        logging.error(
+            <span class="green-text">f"{__name__}: Error searching campaign: {e}"</span>
+        )
+
+        <span class="blue">raise</span></code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

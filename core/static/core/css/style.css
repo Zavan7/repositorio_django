@@ -285,3 +285,255 @@ h1 span {
 
     margin-bottom: 20px;
 }
+.project-page {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    box-sizing: border-box;
+}
+
+.hero-project {
+    margin-bottom: 60px;
+}
+
+.project-tag {
+    color: #38bdf8;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.9rem;
+}
+
+.hero-project h1 {
+    font-size: 4.5rem;
+
+    margin-bottom: 25px;
+
+    line-height: 1;
+}
+
+.hero-project h1 span {
+    color: #38bdf8;
+}
+
+.project-text {
+    max-width: 800px;
+
+    color: #94a3b8;
+
+    line-height: 1.9;
+
+    font-size: 1.1rem;
+}
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.4fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+.project-readme,
+.code-preview {
+    background: rgba(15, 23, 42, 0.75);
+
+    border: 1px solid rgba(56, 189, 248, 0.15);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.project-readme {
+    padding: 30px;
+}
+
+.project-readme h2 {
+    color: #38bdf8;
+
+    margin-bottom: 25px;
+}
+
+.project-readme p,
+.project-readme li {
+    color: #cbd5e1;
+
+    line-height: 1.8;
+}
+
+.project-readme ul {
+    margin: 25px 0;
+
+    padding-left: 20px;
+}
+
+.repo-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    background: #38bdf8;
+
+    color: #020617;
+
+    text-decoration: none;
+
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.repo-link:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
+.editor-top {
+    height: 50px;
+
+    background: #0f172a;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    gap: 10px;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+}
+
+.red {
+    background: #ef4444;
+}
+
+.yellow {
+    background: #f59e0b;
+}
+
+.green {
+    background: #22c55e;
+}
+
+.editor-name {
+    margin-left: 10px;
+
+    color: #94a3b8;
+
+    font-size: 0.9rem;
+}
+
+.editor-body {
+    background: #020617;
+
+    padding: 30px;
+
+    overflow-x: auto;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.editor-body pre {
+    margin: 0;
+
+    color: #e2e8f0;
+
+    font-family:
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    white-space: pre;
+
+    min-width: fit-content;
+}
+
+.editor-body code {
+    display: block;
+}
+
+.blue {
+    color: #38bdf8;
+
+    font-weight: 700;
+}
+
+.green-text {
+    color: #22c55e;
+}
+
+.gray {
+    color: #64748b;
+
+    font-style: italic;
+}
+
+.editor-body code {
+    display: block;
+
+    min-width: fit-content;
+}
+
+.blue {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+.green-text {
+    color: #22c55e;
+}
+
+.gray {
+    color: #64748b;
+
+    font-style: italic;
+}
+
+@media (max-width: 1000px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-project h1 {
+        font-size: 3rem;
+    }
+
+}
