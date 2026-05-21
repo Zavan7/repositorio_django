@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cod 1 | Vitor Zavan</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="background-grid"></div>
+
+    <main class="project-page">
+      <a href="/" class="back-button"> ← Voltar </a>
+
+      <section class="hero-project">
+        <p class="project-tag">Python • Selenium • Automação</p>
+
+        <h1>Diario de <span>Bordo</span></h1>
+
+        <p class="project-text">
+          Automação desenvolvida para acessar um CRM, localizar elementos via
+          XPath e realizar a coleta de informações.
+        </p>
+      </section>
+
+      <section class="project-grid">
+        <div class="project-readme">
+          <h2>SOBRE</h2>
+
+          <p>
+            Projeto criado utilizando Python + Selenium para automatizar o fluxo
+            operacional de raspagem de dados, fazendo uma busca em uma lista,
+            garantindo o máximo aproveitamento das informações.
+          </p>
+
+          <ul>
+            <li>Login automatizado</li>
+            <li>Navegação entre páginas</li>
+            <li>Busca via XPath</li>
+            <li>Controle de fluxo</li>
+            <li>Controle de timeout</li>
+            <li>Tratamento de exceções</li>
+          </ul>
+
+          <a
+            href="https://github.com/Zavan7/Diario-de-Bordo"
+            target="_blank"
+            class="repo-link"
+          >
+            Acessar Repositório
+          </a>
+        </div>
+
+        <div class="code-preview">
+          <div class="editor-top">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+
+            <span class="editor-name"> download.py </span>
+          </div>
+
+          <div class="editor-body">
+            <div class="editor-body">
+              <pre><code><span class="blue">import</span> smtplib
+<span class="blue">from</span> email.message <span class="blue">import</span> EmailMessage
+<span class="blue">from</span> config <span class="blue">import</span> (
+    SMTP_HOST,
+    SMTP_PORT,
+    EMAIL_USER,
+    EMAIL_PASS,
+    EMAIL_SUBJECT
+)
+
+
+<span class="blue">class</span> EmailService:
+
+    <span class="blue">def</span> __init__(self):
+
+        self.server = None
+
+        self._connect()
+
+    <span class="blue">def</span> _connect(self):
+
+        <span class="blue">try</span>:
+
+            self.server = smtplib.SMTP(
+                SMTP_HOST,
+                SMTP_PORT
+            )
+
+            self.server.starttls()
+
+            self.server.login(
+                EMAIL_USER,
+                EMAIL_PASS
+            )
+
+        <span class="blue">except</span> Exception <span class="blue">as</span> e:
+
+            <span class="blue">raise</span> RuntimeError(
+                <span class="green-text">f"Erro ao conectar SMTP: {e}"</span>
+            )
+
+    <span class="blue">def</span> send(self, to: str, message: str):
+
+        <span class="blue">if</span> <span class="blue">not</span> to:
+            <span class="blue">return</span>
+
+        msg = EmailMessage()
+
+        msg[<span class="green-text">"From"</span>] = EMAIL_USER
+
+        msg[<span class="green-text">"To"</span>] = to
+
+        msg[<span class="green-text">"Subject"</span>] = EMAIL_SUBJECT
+
+        msg.set_content(message <span class="blue">or</span> <span class="green-text">""</span>)
+
+        self.server.send_message(msg)
+
+    <span class="blue">def</span> close(self):
+
+        <span class="blue">if</span> self.server:
+
+            <span class="blue">try</span>:
+
+                self.server.quit()
+
+            <span class="blue">except</span> Exception:
+                <span class="blue">pass</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

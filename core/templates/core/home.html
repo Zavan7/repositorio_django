@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Vitor Zavan</title>
 
     {% load static %}
 
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
   </head>
+
   <body>
     <div class="background-grid"></div>
 
     <main class="container">
+      <!-- HERO -->
       <section class="hero">
         <p class="tag">Python • RPA • Automação</p>
 
@@ -20,36 +23,133 @@
 
         <p class="description">
           Desenvolvedor focado em automação de processos, integrações, scraping,
-          bots e soluções com Python.
+          bots e soluções backend com Python.
         </p>
       </section>
 
-      <section class="menu-section">
-        <a href="/sobre/" class="card">
-          <h2>Sobre Mim</h2>
-          <p>Experiência, stack e tecnologias.</p>
-        </a>
+      <!-- PERFIL -->
+      <section class="section-block">
+        <div class="section-title">
+          <span></span>
+          <h2>Perfil Profissional</h2>
+        </div>
 
-        <a href="/contato/" class="card">
-          <h2>Contato</h2>
-          <p>Email, GitHub e networking.</p>
-        </a>
+        <div class="menu-section">
+          <a href="/sobre/" class="card">
+            <div>
+              <h2>Sobre Mim</h2>
 
-        <a href="/codeum/" class="card">
-          <h2>1º Código</h2>
-          <p>Automação de download via CRM.</p>
-        </a>
+              <p>
+                Experiência profissional, stack principal, trajetória e foco em
+                automação.
+              </p>
+            </div>
+          </a>
 
-        <a href="/codedois/" class="card">
-          <h2>2º Código</h2>
-          <p>Web scraping e tratamento de dados.</p>
-        </a>
+          <a href="/contato/" class="card">
+            <div>
+              <h2>Contato</h2>
 
-        <a href="#" class="card">
-          <h2>3º Código</h2>
-          <p>Desenvolvimento Web com Django.</p>
-        </a>
+              <p>GitHub, LinkedIn, email profissional e networking.</p>
+            </div>
+          </a>
+        </div>
       </section>
+
+      <!-- PROJETOS -->
+      <section class="section-block">
+        <div class="section-title">
+          <span></span>
+          <h2>Projetos</h2>
+        </div>
+
+        <div class="menu-section">
+          <a href="/codeum/" class="card">
+            <div>
+              <h2>CRM Download</h2>
+
+              <p>Automação de download via Selenium com controle de timeout.</p>
+            </div>
+          </a>
+
+          <a href="/codedois/" class="card">
+            <div>
+              <h2>Diário de Bordo</h2>
+
+              <p>
+                Coleta automatizada de dados, navegação web e tratamento de
+                informações.
+              </p>
+            </div>
+          </a>
+
+          <a href="/codetres/" class="card">
+            <div>
+              <h2>Email Service</h2>
+
+              <p>
+                Serviço SMTP para envio automatizado de mensagens e
+                notificações.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section class="stack-section">
+        <div class="section-title">
+          <span></span>
+          <h2>Stack Principal</h2>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-card">Python</div>
+
+          <div class="stack-card">RPA</div>
+
+          <div class="stack-card">Playwright</div>
+
+          <div class="stack-card">Selenium</div>
+
+          <div class="stack-card">SQL</div>
+
+          <div class="stack-card">Git</div>
+
+          <div class="stack-card">Django</div>
+
+          <div class="stack-card">APIs</div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-content">
+          <h3>Vitor Zavan</h3>
+
+          <p>
+            Desenvolvedor Python focado em automação, RPA, scraping e soluções
+            backend.
+          </p>
+
+          <div class="footer-links">
+            <a href="https://github.com/Zavan7" target="_blank"> GitHub </a>
+
+            <a
+              href="https://www.linkedin.com/in/vitor-zavan-831907297/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+
+            <a href="mailto:vitorzavanj@gmail.com"> Email </a>
+          </div>
+
+          <span class="footer-copy">
+            © 2026 Vitor Zavan • Todos os direitos reservados
+          </span>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

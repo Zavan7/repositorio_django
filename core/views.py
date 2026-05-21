@@ -18,3 +18,6 @@ def cod1(request):
 
 def cod2(request):
     return render(request, 'core/codedois.html')
+
+def cod3(request):
+    return render(request, 'core/codetres.html')
