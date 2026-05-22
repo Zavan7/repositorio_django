@@ -21,3 +21,6 @@ def cod2(request):
 
 def cod3(request):
     return render(request, 'core/codetres.html')
+
+def estudos(request):
+    return render(request, 'core/estudos.html')
